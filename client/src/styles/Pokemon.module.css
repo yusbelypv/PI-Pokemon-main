@@ -1,0 +1,184 @@
+
+  
+  .card {
+    width: 250px;
+    margin: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    position: relative;
+    
+    
+  }
+
+  
+  .card:hover {
+    /*transform: scale(1.1);*/
+    box-shadow: -2px 5px 21px 4px rgba(199, 39, 68, 0.3);
+    cursor: pointer;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  /* Card Gradient */
+  
+  @-webkit-keyframes slideInLeft {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInLeft {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    color:black;
+
+  }
+
+  .card .cover {
+    width: 100%;
+    /* height: 220px; */
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .card .cover img {
+    width: 140px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 2px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  }
+  
+  .card .img__back {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+  }
+
+  .card .description {
+    background: rgb(207, 205, 205);
+    margin-top: -30px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    text-decoration: none;
+    
+  }
+  
+  .card .description h2 {
+    margin-top: 10px;
+    font-family: "Flexo-Demi", arial, sans-serif;
+    color: black;
+    font-size: 120%;
+    text-transform: none;
+    margin-bottom: 5px;
+    text-decoration-line: none;
+  }
+  
+  .card .description .typesContainer p {
+    margin-top: 10px;
+    font-family: "Flexo-Medium", arial, sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 10px;
+    width: 40%;
+    text-align: center;
+    padding: 3px;
+    border: solid 2px var(--btn-gray);
+    background-color: #c7183b;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    
+    
+    
+  }
+  
+  .card .description .idPokemon {
+    font-family: "Flexo-Bold", arial, sans-serif;
+    color: #c7183b;
+    font-size: 80%;
+    padding-top: 2px;
+    
+  }
+  
+  .card .description button {
+    padding: 6px 20px;
+    margin-top: 20px;
+    border: none;
+    background: #c7183b;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 300ms;
+  }
+  
+  .card .description button:hover {
+    background: #c7183b;
+  }
+  
+  .card .description .typesContainer {
+    display: flex;
+  }
+  
+ 
