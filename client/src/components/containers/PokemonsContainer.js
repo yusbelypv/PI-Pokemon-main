@@ -7,7 +7,7 @@ import styles from "../../styles/PageNotFound.module.css";
 
 
 function PokemonsContainer({ lastItemIndex, firstItemIndex }) {
-  //https://react-redux.js.org/api/hooks
+  
   const pokemons = useSelector((state) => state.pokemons);
   const dispatch = useDispatch();
 

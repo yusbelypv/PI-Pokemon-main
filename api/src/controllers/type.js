@@ -17,8 +17,6 @@ const getTypes = async (req, res) => {
           });
         });
     
-        const typesToDB = await Promise.all(typesToDBPromises);
-    
         const typesDB = await Type.findAll();
     
         typesDbNormalized = normalizeTypes(typesDB); //Type con la primer letra en mayuscula

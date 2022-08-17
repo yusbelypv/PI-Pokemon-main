@@ -74,6 +74,7 @@ function Home() {
 
   //Función para el boton refresh. Setea la pagina en 1
   const handleRefresh = () => {
+
     dispatch(setLoaderTrue());
     dispatch(getPokemons());
     setCurrentPage(1);
@@ -98,6 +99,8 @@ function Home() {
 
       {spinnerLoader ? (
         <img src={spinner} alt="...loading" className={styles.spinnerStyle} />
+        
+        
       ) : (
         <div>
           <PokemonsContainer

@@ -9,7 +9,7 @@ const getPokemon = async(req, res) => {
         // - Llamada a Db por name - //
         if(name){
             const nameLower = name.trim().toLowerCase();
-             /// se busca en minúsculas ya que se almaceno asi
+             /// elimina espacios y se busca en minúsculas 
             const pokemonDbByName = await Pokemon.findOne({
                 where: { name: nameLower },
                 include: Type, 
@@ -27,7 +27,7 @@ const getPokemon = async(req, res) => {
         // - Llamada a la Api - //
         const infoApi = await Promise.all([
             axios.get("https://pokeapi.co/api/v2/pokemon"),
-            axios.get("https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"),
+            axios.get("https://pokeapi.co/api/v2/pokemon?offset=40&limit=20"),
         ]);
         infoArr1 = infoApi[0].data.results;
         infoArr2 = infoApi[1].data.results;

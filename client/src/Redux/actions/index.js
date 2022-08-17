@@ -92,10 +92,8 @@ export function filterPokemonCreated(created) {
   };
 }
 
-// Documentación para dispachar código asincrono https://redux.js.org/tutorials/fundamentals/part-6-async-logic
 export function saveNewPokemon(pokemon) {
   return function (dispatch) {
-    //Chequear de que forma llega pokemon. Como un objeto?
     return axios
       .post("/pokemons", pokemon)
       .then((resp) => {
