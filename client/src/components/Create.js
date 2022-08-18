@@ -6,6 +6,7 @@ import BackBtn from "./buttons/BackBtn";
 import validateForm from "../components/validateForm";
 import styles from "../styles/Form.module.css";
 import { Link } from "react-router-dom";
+import Clear from "./buttons/Clear";
 import homeButton from "../assets/homeButton.png";
 import Footer from "./presentationals/Footer.js";
 
@@ -112,6 +113,7 @@ function Create() {
     <div>
        <header className={styles.header_home}> <h2>Pokemon App ---  Create New Pokemon   </h2> 
           <Link to="/"> <img src={homeButton} alt="logo" /> </Link>
+          <Clear />
       </header>
     
     <div className={styles.formContainer}>

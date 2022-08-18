@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import NavHome from "./NavHome";
 import PokemonsContainer from "./PokemonsContainer";
 import Refresh from "../buttons/Refresh";
+import Clear from "../buttons/Clear";
 import { useDispatch, useSelector } from "react-redux";
 import {
   filterPokemonByType,
@@ -10,6 +11,7 @@ import {
   getPokemons,
   getTypes,
   setLoaderTrue,
+  
   sortPokemonsAlphabetically,
   sortPokemonsByStrength,
 } from "../../Redux/actions/index";
@@ -77,13 +79,16 @@ function Home() {
 
     dispatch(setLoaderTrue());
     dispatch(getPokemons());
+
     setCurrentPage(1);
   };
+
 
   return (
     <div className={styles.homeContainer}>
       <header className={styles.header_home}> <h2>Pokemon App ---  Home   </h2> 
       <Link to="/"> <img src={homeButton} alt="logo" /> </Link>
+      <Clear />
       </header>
       <div>
         <NavHome
@@ -95,6 +100,7 @@ function Home() {
       </div>
 
        <Refresh handleRefresh={handleRefresh} />
+       
       
 
       {spinnerLoader ? (

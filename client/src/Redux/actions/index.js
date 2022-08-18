@@ -97,7 +97,8 @@ export function saveNewPokemon(pokemon) {
     return axios
       .post("/pokemons", pokemon)
       .then((resp) => {
-        alert("Pokemon created correctly!");
+        //alert("Pokemon created correctly!");
+        window.location ='http://localhost:3000/pokemonCreate';
         return dispatch({ type: actionTypes.POST_POKEMON, payload: resp });
       })
       .catch((e) => {
