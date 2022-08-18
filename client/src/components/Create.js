@@ -11,6 +11,7 @@ import homeButton from "../assets/homeButton.png";
 import Footer from "./presentationals/Footer.js";
 
 function Create() {
+
   const [dataForm, setDataForm] = useState({
     name: "",
     hp: "",
@@ -22,6 +23,7 @@ function Create() {
     types: [],
     urlImg: "",
   });
+  
   const [error, setError] = useState({}); //Estado local para validar el formulario
   const [disabled, setDisabled] = useState(true); //Habilitador del botón submit cuando no haya ningun error en el formulario
   let navigate = useHistory();

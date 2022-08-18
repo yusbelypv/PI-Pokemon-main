@@ -14,6 +14,7 @@ import Footer from "../presentationals/Footer";
 
 
 function DetailContainer() {
+  
   const pokemon = useSelector((state) => state.pokemon);
   let { id } = useParams();
   const dispatch = useDispatch();

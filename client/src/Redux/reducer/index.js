@@ -1,15 +1,16 @@
 import { actionTypes } from "../actions";
 
 const initialState = {
-  pokemons: [], // {id, name, type, img_url} de todos los pokemones, se ira modificando con los filtrados y sorts
-  pokemon: {}, //pokemon detail {id, name, type, img_url, hp, speed, ...stats, etc}
-  allPokemons: [], //Siempre cuenta con todos los pokemones
-  filtered: [], //Pokemones filtrados según corresponda.
+  pokemons: [], 
+  pokemon: {}, 
+  allPokemons: [], 
+  filtered: [],  
   types: [],
   spinnerLoader: true,
 };
 
 function rootReducer(state = initialState, action) {
+  
   switch (action.type) {
     case actionTypes.GET_POKEMONS: {
       return {

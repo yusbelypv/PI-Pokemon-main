@@ -25,14 +25,14 @@ import Footer from "../presentationals/Footer";
 
 function Home() {
   //Hooks para manejar el estado local y el renderizado de mi componente
-  //eslint-disable-next-line
-  const [order, setOrder] = useState(""); // Hook para manejar el ordenamiento. Necesario para que se modifique el estado del componente y así re-renderice
-  const [currentPage, setCurrentPage] = useState(1); // Hook para manejar el paginado
+ 
+  const [order, setOrder] = useState(""); 
+  const [currentPage, setCurrentPage] = useState(1); 
   const spinnerLoader = useSelector((state) => state.spinnerLoader);
 
   const pokemons = useSelector((state) => state.pokemons);
   const dispatch = useDispatch();
-  const quantityXPage = 12; //Cantidad pokemons por página
+  const quantityXPage = 12; 
 
   //Llamado a la API para obtener types y pokemons
   useEffect(() => {
@@ -79,7 +79,6 @@ function Home() {
 
     dispatch(setLoaderTrue());
     dispatch(getPokemons());
-
     setCurrentPage(1);
   };
 

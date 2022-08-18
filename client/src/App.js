@@ -12,21 +12,21 @@ function App() {
   <BrowserRouter>
     <div className="App">
     <Switch>
-    <Route exact path="/">
+      <Route exact path="/">
             <LandingPage/>
-    </Route> 
-    <Route exact path="/home">
+      </Route> 
+      <Route exact path="/home">
             <Home/>
-    </Route> 
-    <Route exact path="/detail/:id">
+      </Route> 
+      <Route exact path="/detail/:id">
             <DetailContainer/>
-    </Route> 
-    <Route exact path="/create">
+      </Route> 
+      <Route exact path="/create">
             <Create/>
-    </Route> 
-    <Route exact path="/pokemonCreate">
+      </Route> 
+      <Route exact path="/pokemonCreate">
             <PokemonCreado/>
-    </Route> 
+      </Route> 
      </Switch>
     </div> 
     </BrowserRouter>

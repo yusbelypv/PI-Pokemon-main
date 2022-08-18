@@ -18,5 +18,4 @@ router.post("/pokemons", postPokemon);
 router.get("/types", getTypes);
 
 
-
 module.exports = router;
