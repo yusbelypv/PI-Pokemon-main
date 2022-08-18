@@ -39,7 +39,7 @@ function NavHome({
         <li>
           <Sort
             handleSort={handleSortStrength}
-            sortDescription="Sort by Strength"
+            sortDescription="Sort by Attack"
           />
         </li>
         <li>
